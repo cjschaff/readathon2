@@ -8,9 +8,10 @@ feature 'Student management' do
     
     click_link "Add Student"
     fill_in "Name", with: "Bill"
+    select 'Mr. Renner' :from => 'Teacher'
+    fill_in "Teacher", with: "Mr. Renner"
     click_button "Create Student"
     expect(page).to have_content "Created"
-    
     
     expect(page).to have_content "Bill"    
     click_link "Edit"
@@ -18,7 +19,7 @@ feature 'Student management' do
     click_button "Update Student"
     expect(page).to have_content "Updated"
     
-    expect(page).to have_content "Frank"  
+
     click_link "Delete"
     expect(page).to have_content "Destroyed"
     expect(page).to have_content "Students"
