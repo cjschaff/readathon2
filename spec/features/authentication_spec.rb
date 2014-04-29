@@ -9,10 +9,10 @@ feature 'Authentication' do
     
     click_link "Sign in"
     
-    fill_in "email", with: "factorygirl@cjhosting.net"#fill in email, 
+    fill_in "Email", with: "factorygirl@cjhosting.net"#fill in email, 
     fill_in "Password", with: "password"#fill in a password, 
-    click_button "Sign In" #submit
+    click_button "Sign in" #submit
     expect(page).to have_content "Welcome" #expect a welcome message
-    expect(page).to have content "Sign out" #log out option
+    expect(page).to have_content "Sign out" #log out option
   end
 end

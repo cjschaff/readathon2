@@ -21,3 +21,20 @@ This is a starter app for the Durango Ruby School in-class project.
     ```
     $ rake
     ```
+    
+## clearance instructions
+                                                                                                                                                                          
+2. Display user session and flashes. For example, in your application layout:                                                                                             
+                                                                                                                                                                          
+    <% if signed_in? %>                                                                                                                                                   
+      Signed in as: <%= current_user.email %>                                                                                                                             
+      <%= link_to 'Sign out', sign_out_path, :method => :delete %>                                                                                                        
+    <% else %>                                                                                                                                                            
+      <%= link_to 'Sign in', sign_in_path %>                                                                                                                              
+    <% end %>                                                                                                                                                             
+                                                                                                                                                                          
+    <div id="flash">                                                                                                                                                      
+      <% flash.each do |key, value| %>                                                                                                                                    
+        <div class="flash <%= key %>"><%= value %></div>                                                                                                                  
+      <% end %>                                                                                                                                                           
+    </div>                         
