@@ -14,5 +14,8 @@ feature 'Authentication' do
     click_button "Sign in" #submit
     expect(page).to have_content "Welcome" #expect a welcome message
     expect(page).to have_content "Sign out" #log out option
+    click_link "Sign out"
+    expect(page).to have_content "Sign in" #expect a welcome message
+    
   end
 end
