@@ -8,7 +8,7 @@ feature 'Student management' do
     
     click_link "Add Student"
     fill_in "Name", with: "Bill"
-    select 'Mr. Renner' :from => 'Teacher'
+    select 'Mr. Renner', :from => 'Teacher'
     fill_in "Teacher", with: "Mr. Renner"
     click_button "Create Student"
     expect(page).to have_content "Created"
